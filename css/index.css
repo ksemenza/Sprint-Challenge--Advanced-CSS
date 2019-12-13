@@ -33,6 +33,60 @@
   padding: 1% 5%;
   background-color: #F6F6F6;
 }
+.cardDimSpec {
+  border: 1px solid black;
+  backface-visibility: hidden;
+  border-radius: 6px;
+  height: 100%;
+  width: 100%;
+  padding: 5%;
+  font-size: 2.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 2.2rem;
+  padding-top: 5%;
+}
+.cardQusAns1 .answer1,
+.cardQusAns1:hover > .question1 {
+  display: none;
+}
+.cardQusAns1 .question1,
+.cardQusAns1:hover > .answer2 {
+  display: block;
+}
+.cardQusAns2 .answer2,
+.cardQusAns2:hover > .question2 {
+  display: none;
+}
+.cardQusAns2 .question2,
+.cardQusAns2:hover > .answer2 {
+  display: block;
+}
+.cardQusAns3 .answer3,
+.cardQusAns3:hover > .question3 {
+  display: none;
+}
+.cardQusAns3 .question3,
+.cardQusAns3:hover > .answer3 {
+  display: block;
+}
+.cardQusAns4 .answer4,
+.cardQusAns4:hover > .question4 {
+  display: none;
+}
+.cardQusAns4 .question4,
+.cardQusAns4:hover > .answer4 {
+  display: block;
+}
+.cardQusAns5 .answer5,
+.cardQusAns5:hover > .question5 {
+  display: none;
+}
+.cardQusAns5 .question5,
+.cardQusAns5:hover > .answer5 {
+  display: block;
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -194,6 +248,7 @@ p {
   font-size: 1.6rem;
   line-height: 1.4;
 }
+/*Change max-width*/
 .container {
   max-width: 800px;
   width: 100%;
@@ -219,6 +274,10 @@ nav a {
   text-decoration: none;
   color: black;
 }
+/*ABOUT NAV */
+.navAbout a {
+  color: #F1F1F1;
+}
 footer {
   color: #22283B;
   background: #f4f4f4;
@@ -228,6 +287,15 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  /*Adjust to center */
+  margin-left: 8%;
+  margin-right: 8%;
+}
+@media (max-width: 500px) {
+  footer {
+    margin-left: 3%;
+    margin-right: 3%;
+  }
 }
 @font-face {
   font-family: 'Play';
@@ -386,4 +454,84 @@ footer {
   width: 100%;
   height: auto;
   border-radius: 10px;
+}
+.about header .headerTop {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3%;
+  padding: 1% 5%;
+  background-color: #F6F6F6;
+}
+.about header .headerBottom {
+  margin-left: 8%;
+  margin-right: 8%;
+  margin-bottom: 5%;
+}
+.about header img {
+  height: 300px;
+}
+@media (max-width: 500px) {
+  .about header img {
+    display: none;
+  }
+}
+.about .mainAbout {
+  padding-bottom: 25%;
+  column-count: 2;
+}
+@media (max-width: 500px) {
+  .about .mainAbout {
+    column-count: 1;
+  }
+}
+.about .mainAbout .cardQuestions .cardContainer {
+  cursor: pointer;
+  height: 250px;
+  perspective: 600;
+  position: relative;
+  width: 375px;
+  margin: 3%;
+}
+.about .mainAbout .cardQuestions .cardContainer .card {
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: all 1s ease-in-out;
+  width: 100%;
+}
+.about .mainAbout .cardQuestions .cardContainer .card .sideOne {
+  border: 1px solid black;
+  backface-visibility: hidden;
+  border-radius: 6px;
+  height: 100%;
+  width: 100%;
+  padding: 5%;
+  font-size: 2.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 2.2rem;
+  padding-top: 5%;
+  position: absolute;
+  overflow: hidden;
+}
+.about .mainAbout .cardQuestions .cardContainer .card .sideTwo {
+  border: 1px solid black;
+  backface-visibility: hidden;
+  border-radius: 6px;
+  height: 100%;
+  width: 100%;
+  padding: 5%;
+  font-size: 2.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 2.2rem;
+  padding-top: 5%;
+  transform: rotateY(180deg);
+}
+.about .mainAbout .cardQuestions .cardContainer .card:hover {
+  transform: rotateY(180deg);
 }

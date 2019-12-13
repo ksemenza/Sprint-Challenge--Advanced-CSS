@@ -1,0 +1,91 @@
+.about {
+
+    
+
+
+header {
+
+    .headerTop {
+        .headerCenter();
+       
+    }
+
+    .headerBottom {
+        .mainCenter();
+        margin-bottom: 5%;
+    }
+
+img {
+    height: 300px;
+
+    @media @phone {
+        display: none;
+    }
+}//img
+
+}//header
+
+.mainAbout {
+
+    padding-bottom: 25%;
+
+ 
+    column-count: 2;
+
+    @media @phone {
+        column-count: 1;
+    }
+
+    .cardQuestions {
+  
+    
+
+  
+        .cardContainer {
+
+            cursor: pointer;
+            height: 250px;
+            perspective: 600;
+            position: relative;
+            width: 375px;
+            margin: 3%;
+
+        .card {
+     
+    
+            height: 100%;
+            position: absolute;
+            transform-style: preserve-3d;
+            transition: all 1s ease-in-out;
+            width: 100%;
+           
+
+            .sideOne {
+                .cardDimSpec();
+
+                position: absolute;
+                overflow: hidden;
+            
+              
+
+            }//side 1
+
+            .sideTwo {
+                .cardDimSpec();
+                transform: rotateY(180deg);
+
+            }//side 2
+
+            &:hover {
+                transform: rotateY(180deg); 
+            }
+
+        }//card
+    }//cardContainer
+
+    }//cardQuestions
+
+}//mainAbout
+
+
+}//about
