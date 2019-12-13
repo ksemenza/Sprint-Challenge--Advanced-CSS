@@ -1,1 +1,25 @@
 // Mixins Here
+
+
+/*Created Button */
+.btnSign (@bgColorBtn, @txtColorBtn) {
+    background-color:@bgColorBtn;
+    border:none;
+    color: @txtColorBtn;
+    text-decoration: none;
+    display: flex;
+    font-size: 1.8rem;
+    width: 100px;
+    padding: 10px 10px;
+    border-radius: 7px;
+    justify-content: center;
+    margin-bottom: 10%;
+
+    /* HOVER */
+    &:hover {
+        color: @bgColorBtn;
+        background-color: @txtColorBtn;
+        border:1px solid black;
+
+    }
+}
