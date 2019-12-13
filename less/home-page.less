@@ -1,76 +1,137 @@
 // Home Content
-
+//font import
+@import url('https://fonts.googleapis.com/css?family=Play:700&display=swap');
 .home {
 
   .intro {
 
+    .headerTop {
+      .headerCenter();
+    }
+
+
+/* HEADER IMG EARTH FROM SPACE */
+    .headerBottom {
+      display: flex;
+      flex-direction: column;
+     .mainCenter();
+/* ADJUST MARG @PHONE DIM */
+     @media @phone {
+      .mainCenPh();
+     }//@media @phone / headerBtm / intro
+
+
+    }//headerBottom / intro
     h2 {
       padding: 15px;
-    }
+    }//h2 / intro
 
     p {
       padding:0 15px;
-    }
-  
-  }
 
+
+    }//p / intro
+  }//intro
+/* THREE MID IMG */
   .space-images {
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
-
+    width: 85%;
+    margin: 0 auto;
     img {
       width: 28%;
       margin: 20px 2.5%;
       border-radius: 20px;
       height: 100%;
-    }
-  }
+
+    /* THREE IMG DISPLAY NONE MOBILE 500PX*/
+    @media @phone {
+        display: none;
+    }//@media @phone / img 
+  }// img / space-img
+}//space-img
 
   .visit-planets {
     padding: 15px;
+   .mainCenter();
+
+   @media @phone {
+    .mainCenPh();
+   }//@media @phone / visit-planet / intro
 
     h3 {
       margin-top: 11px;
-    }
+    }//h3 / visit planets 
 
     p {
       margin-top: 13px;
-    }
-  }
+    }// p / visit-planets
+  }//visit-plants
 
   .walk {
-    margin-top: 60px;
     border-top: 1px solid @main-border-color;
-    padding: 50px 60px;
     display: flex;
-    justify-content: center;
+    .padBotSecSm();
+
+
+    /* ALIGN BOTTOM SECTION COLUMN 500PX */
+    @media @phone {
+      flex-direction: column-reverse;
+      align-items: center;
+      .padBotSecSmPhone();
+    }//@media @phone / walk
 
     .walk-text {
-      width: 50%;
+
+      /* CHANGES WIDTH OF BOTTTOM SECTION 'WALK */
+      width: 45%;
+      padding: 0 5%;
+
+      /*WIDEN BOTTOM SEC @PHONE*/
+      @media @phone {
+        width: 100%;
+        margin: 0 auto;
+      }//@media @phone / walk-text
 
       h3 {
+        margin-top: 5%;
         margin-bottom: 10px;
-      }
+      }// h3 walk-text
 
       p {
         margin-bottom: 26px;
-      }
+        width: 100%;
+      }//p / walk-text
 
+      /* PARAMATERS PASSED INTO BTN FORM MIXIN*/
       .btn {
         .btnSign(black, white);
-      }
-    }
 
+        /*  EXTENDS BUTTON FOR @PHONE */
+        @media @phone {
+         width: 100%;
+         
+        }
+
+      }//btn / walk-text
+    }//walk-text
     .walk-img {
       width: 46%;
-      margin-left: 4%;
-      
+      padding-left: 3%;
+      margin: 0 auto;
+
+      /*STRETCH BOTTOM IMG @PHONE*/
+      @media @phone {
+        width: 100%;
+        margin-left: 0;
+        .mainCenPh();
+      }//@media @phone walk-img
       img {
         width: 100%;
         height: auto;
         border-radius: 10px;
-      }
-    }
-  }
+      
+      }//img / walk
+    }//walk-img
+  }//walk
 }// home

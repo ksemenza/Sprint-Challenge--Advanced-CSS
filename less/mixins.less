@@ -2,6 +2,7 @@
 
 
 /*Created Button */
+
 .btnSign (@bgColorBtn, @txtColorBtn) {
     background-color:@bgColorBtn;
     border:none;
@@ -23,3 +24,39 @@
 
     }
 }
+
+/* SQUEEZES MAIN CONTENT FOR HEADER TO BE LONGER */
+.mainCenter {
+    margin-left: @marginCenter;
+    margin-right: @marginCenter;
+}
+/* .MAINCENTER PHONE ADJ */
+ .mainCenPh {
+     margin-left: @marginCenPhone;
+     margin-right: @marginCenPhone;
+ }
+
+
+/*COMPRESSES BOTTOM SEC TO HAVE SM WIDTH */
+.padBotSecSm {
+    padding-top: 5%;
+    padding-right: @padBotSec;
+    padding-left: @padBotSec;
+    margin: 0 auto;
+}
+
+.padBotSecSmPhone {
+    padding-right: 2%;
+    padding-left: 2%;
+}
+
+/* Centering h1 and nav */
+.headerCenter {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3%;
+    padding: 1% 5%;
+    background-color: @nav-bg;
+  }

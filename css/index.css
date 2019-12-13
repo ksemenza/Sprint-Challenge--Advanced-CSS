@@ -1,4 +1,38 @@
+/*MAIN ADJUST */
+/*BOTTOM SECTION PADDING FIX FOR SM WIDTH */
+/*MARGIN CENTER */
 /*Created Button */
+/* SQUEEZES MAIN CONTENT FOR HEADER TO BE LONGER */
+.mainCenter {
+  margin-left: 8%;
+  margin-right: 8%;
+}
+/* .MAINCENTER PHONE ADJ */
+.mainCenPh {
+  margin-left: 3%;
+  margin-right: 3%;
+}
+/*COMPRESSES BOTTOM SEC TO HAVE SM WIDTH */
+.padBotSecSm {
+  padding-top: 5%;
+  padding-right: 12%;
+  padding-left: 12%;
+  margin: 0 auto;
+}
+.padBotSecSmPhone {
+  padding-right: 2%;
+  padding-left: 2%;
+}
+/* Centering h1 and nav */
+.headerCenter {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3%;
+  padding: 1% 5%;
+  background-color: #F6F6F6;
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -146,6 +180,10 @@ h5 {
   font-family: 'Russo One', sans-serif;
   color: #23293B;
 }
+/* UPDATED H1 FOR SPACE WALKERS*/
+h1 {
+  font-size: 3.5rem;
+}
 h2 {
   font-size: 3.2rem;
 }
@@ -169,6 +207,13 @@ nav {
   font-size: 1.6rem;
   margin-bottom: 1%;
   margin-top: 1%;
+  /*@MEDIA @PHONE FITS A IN NAV */
+}
+@media (max-width: 500px) {
+  nav {
+    justify-content: space-evenly;
+    width: 100%;
+  }
 }
 nav a {
   text-decoration: none;
@@ -184,6 +229,41 @@ footer {
   justify-content: center;
   align-items: center;
 }
+@font-face {
+  font-family: 'Play';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Play Bold'), local('Play-Bold'), url(https://fonts.gstatic.com/s/play/v11/6ae84K2oVqwItm4TCpAy3w.ttf) format('truetype');
+}
+.home {
+  /* THREE MID IMG */
+}
+.home .intro {
+  /* HEADER IMG EARTH FROM SPACE */
+}
+.home .intro .headerTop {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3%;
+  padding: 1% 5%;
+  background-color: #F6F6F6;
+}
+.home .intro .headerBottom {
+  display: flex;
+  flex-direction: column;
+  margin-left: 8%;
+  margin-right: 8%;
+  /* ADJUST MARG @PHONE DIM */
+}
+@media (max-width: 500px) {
+  .home .intro .headerBottom {
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+}
 .home .intro h2 {
   padding: 15px;
 }
@@ -193,16 +273,31 @@ footer {
 .home .space-images {
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
+  width: 85%;
+  margin: 0 auto;
 }
 .home .space-images img {
   width: 28%;
   margin: 20px 2.5%;
   border-radius: 20px;
   height: 100%;
+  /* THREE IMG DISPLAY NONE MOBILE 500PX*/
+}
+@media (max-width: 500px) {
+  .home .space-images img {
+    display: none;
+  }
 }
 .home .visit-planets {
   padding: 15px;
+  margin-left: 8%;
+  margin-right: 8%;
+}
+@media (max-width: 500px) {
+  .home .visit-planets {
+    margin-left: 3%;
+    margin-right: 3%;
+  }
 }
 .home .visit-planets h3 {
   margin-top: 11px;
@@ -211,20 +306,42 @@ footer {
   margin-top: 13px;
 }
 .home .walk {
-  margin-top: 60px;
   border-top: 1px solid #dee2e6;
-  padding: 50px 60px;
   display: flex;
-  justify-content: center;
+  padding-top: 5%;
+  padding-right: 12%;
+  padding-left: 12%;
+  margin: 0 auto;
+  /* ALIGN BOTTOM SECTION COLUMN 500PX */
+}
+@media (max-width: 500px) {
+  .home .walk {
+    flex-direction: column-reverse;
+    align-items: center;
+    padding-right: 2%;
+    padding-left: 2%;
+  }
 }
 .home .walk .walk-text {
-  width: 50%;
+  /* CHANGES WIDTH OF BOTTTOM SECTION 'WALK */
+  width: 45%;
+  padding: 0 5%;
+  /*WIDEN BOTTOM SEC @PHONE*/
+  /* PARAMATERS PASSED INTO BTN FORM MIXIN*/
+}
+@media (max-width: 500px) {
+  .home .walk .walk-text {
+    width: 100%;
+    margin: 0 auto;
+  }
 }
 .home .walk .walk-text h3 {
+  margin-top: 5%;
   margin-bottom: 10px;
 }
 .home .walk .walk-text p {
   margin-bottom: 26px;
+  width: 100%;
 }
 .home .walk .walk-text .btn {
   background-color: black;
@@ -239,15 +356,31 @@ footer {
   justify-content: center;
   margin-bottom: 10%;
   /* HOVER */
+  /*  EXTENDS BUTTON FOR @PHONE */
 }
 .home .walk .walk-text .btn:hover {
   color: black;
   background-color: white;
   border: 1px solid black;
 }
+@media (max-width: 500px) {
+  .home .walk .walk-text .btn {
+    width: 100%;
+  }
+}
 .home .walk .walk-img {
   width: 46%;
-  margin-left: 4%;
+  padding-left: 3%;
+  margin: 0 auto;
+  /*STRETCH BOTTOM IMG @PHONE*/
+}
+@media (max-width: 500px) {
+  .home .walk .walk-img {
+    width: 100%;
+    margin-left: 0;
+    margin-left: 3%;
+    margin-right: 3%;
+  }
 }
 .home .walk .walk-img img {
   width: 100%;
